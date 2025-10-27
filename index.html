@@ -214,16 +214,17 @@
         }
 
         .action-items {
-            background: #fffaf5;
-            border-left: 4px solid #ff9600;
-            padding: 2rem;
-            margin: 2.5rem 0;
-            border-radius: 4px;
+            background: transparent;
+            border-left: none;
+            padding: 0;
+            margin: 0;
+            border-radius: 0;
         }
 
         .action-items h3 {
             color: #ff9600;
             margin-top: 0;
+            margin-bottom: 0.5rem;
         }
 
         .action-items ul {
@@ -327,9 +328,93 @@
             transition: all 0.3s ease;
         }
 
-        a:hover {
-            color: #ff5555;
-            border-bottom-color: #ff5555;
+        .task-item {
+            background: #f8f9fa;
+            border-left: 4px solid #ff4444;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .task-content {
+            flex: 1;
+        }
+
+        .task-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .task-name {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #000000;
+            margin: 0;
+        }
+
+        .task-status {
+            display: inline-block;
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .status-done {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status-ongoing {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+
+        .status-pending {
+            background: #f0f0f0;
+            color: #666;
+            border: 1px solid #ddd;
+        }
+
+        .task-metadata {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.5rem;
+            line-height: 1.5;
+        }
+
+        .task-metadata-label {
+            font-weight: 600;
+            color: #000000;
+        }
+
+        .task-right {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .task-item {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .task-right {
+                text-align: left;
+            }
         }
 
         footer {
@@ -463,15 +548,96 @@
         <!-- Action Items -->
         <section>
             <div class="action-items">
-                <h3>Currently Ongoing Tasks</h3>
-                <ul>
-                    <li>Building Morocco teams database (view live: <a href="https://docs.google.com/spreadsheets/d/1XEcbzNTvhGeAPJYjfoEOZlqfj1J9qFe6aYADnf18q8o/edit?gid=0#gid=0" target="_blank">Google Sheets</a>)</li>
-                    <li>Identifying 3-5 anchor teams for prioritized outreach</li>
-                    <li>Researching current merch efforts by top Moroccan clubs</li>
-                    <li>Mapping local payment systems, logistics, e-commerce platforms</li>
-                    <li>Scouting existing competitors selling Moroccan sports merchandise</li>
-                    <li>Preliminary conversations with 2-3 club stakeholders scheduled</li>
-                </ul>
+                <h3>Task Tracker</h3>
+                <p style="color: #666; font-size: 0.95rem; margin-bottom: 1.5rem;">All tasks and milestones for Morocco expansion. Status updated weekly.</p>
+
+                <!-- Task 1 -->
+                <div class="task-item">
+                    <div class="task-content">
+                        <div class="task-header">
+                            <p class="task-name">Building preliminary Morocco teams database</p>
+                            <span class="task-status status-done">✓ Done</span>
+                        </div>
+                        <div class="task-metadata">
+                            <span class="task-metadata-label">Created:</span> Oct 27, 2025 | 
+                            <span class="task-metadata-label">Updated:</span> Oct 27, 2025
+                        </div>
+                    </div>
+                    <div class="task-right">
+                        <a href="https://docs.google.com/spreadsheets/d/1XEcbzNTvhGeAPJYjfoEOZlqfj1J9qFe6aYADnf18q8o/edit?gid=0#gid=0" target="_blank" style="font-size: 0.9rem;">View Sheets →</a>
+                    </div>
+                </div>
+
+                <!-- Task 2 -->
+                <div class="task-item">
+                    <div class="task-content">
+                        <div class="task-header">
+                            <p class="task-name">Identifying 3-5 anchor teams for prioritized outreach</p>
+                            <span class="task-status status-ongoing">◐ Ongoing</span>
+                        </div>
+                        <div class="task-metadata">
+                            <span class="task-metadata-label">Created:</span> Oct 27, 2025 | 
+                            <span class="task-metadata-label">Updated:</span> Oct 27, 2025
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task 3 -->
+                <div class="task-item">
+                    <div class="task-content">
+                        <div class="task-header">
+                            <p class="task-name">Researching current merch efforts by top Moroccan clubs</p>
+                            <span class="task-status status-ongoing">◐ Ongoing</span>
+                        </div>
+                        <div class="task-metadata">
+                            <span class="task-metadata-label">Created:</span> Oct 27, 2025 | 
+                            <span class="task-metadata-label">Updated:</span> Oct 27, 2025
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task 4 -->
+                <div class="task-item">
+                    <div class="task-content">
+                        <div class="task-header">
+                            <p class="task-name">Mapping local payment systems, logistics, e-commerce platforms</p>
+                            <span class="task-status status-ongoing">◐ Ongoing</span>
+                        </div>
+                        <div class="task-metadata">
+                            <span class="task-metadata-label">Created:</span> Oct 27, 2025 | 
+                            <span class="task-metadata-label">Updated:</span> Oct 27, 2025
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task 5 -->
+                <div class="task-item">
+                    <div class="task-content">
+                        <div class="task-header">
+                            <p class="task-name">Scouting existing competitors selling Moroccan sports merchandise</p>
+                            <span class="task-status status-ongoing">◐ Ongoing</span>
+                        </div>
+                        <div class="task-metadata">
+                            <span class="task-metadata-label">Created:</span> Oct 27, 2025 | 
+                            <span class="task-metadata-label">Updated:</span> Oct 27, 2025
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task 6 -->
+                <div class="task-item">
+                    <div class="task-content">
+                        <div class="task-header">
+                            <p class="task-name">Preliminary conversations with 2-3 club stakeholders scheduled</p>
+                            <span class="task-status status-ongoing">◐ Ongoing</span>
+                        </div>
+                        <div class="task-metadata">
+                            <span class="task-metadata-label">Created:</span> Oct 27, 2025 | 
+                            <span class="task-metadata-label">Updated:</span> Oct 27, 2025
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
