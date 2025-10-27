@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSL - The Forge - Morocco Expansion Brief</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: #f8f9fa;
+            color: #2c3e50;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #ffffff;
+            border-bottom: 3px solid #ff4444;
+            padding: 2rem 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ff4444;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.25rem;
+        }
+
+        .update-date {
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            background: #ffffff;
+            border-left: 4px solid #ff4444;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #ff4444;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #2c3e50;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .metric-card {
+            background: #fff5f5;
+            border: 1px solid #ffcccc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ff4444;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .comparison-item {
+            padding: 1.5rem;
+            border-radius: 8px;
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+        }
+
+        .comparison-item h4 {
+            color: #ff4444;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .comparison-item p {
+            color: #2c3e50;
+            font-size: 0.95rem;
+        }
+
+        .strategic-questions {
+            margin: 2rem 0;
+        }
+
+        .question-box {
+            background: #fff5f5;
+            border-left: 4px solid #ff4444;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .question-num {
+            color: #ff4444;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .question-text {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        .question-subtext {
+            color: #555;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .action-items {
+            background: #fffaf5;
+            border-left: 4px solid #ff9600;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .action-items h3 {
+            color: #ff9600;
+            margin-top: 0;
+        }
+
+        .action-items ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .action-items li {
+            padding: 0.5rem 0;
+            color: #2c3e50;
+            border-bottom: 1px solid rgba(255, 150, 0, 0.2);
+        }
+
+        .action-items li:last-child {
+            border-bottom: none;
+        }
+
+        .action-items li:before {
+            content: "→ ";
+            color: #ff9600;
+            font-weight: 700;
+            margin-right: 0.75rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff5f5, #fffaf5);
+            border: 1px solid #ffcccc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box strong {
+            color: #ff4444;
+        }
+
+        .market-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .market-list li {
+            padding: 0.75rem 0;
+            color: #2c3e50;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .market-list li:before {
+            content: "⚽";
+            position: absolute;
+            left: 0;
+        }
+
+        .cta-section {
+            background: #fff5f5;
+            border: 2px solid #ff4444;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .cta-section h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .cta-section p {
+            color: #555;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff4444;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button:hover {
+            background: #ff5555;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 68, 68, 0.3);
+        }
+
+        footer {
+            background: #ffffff;
+            border-top: 1px solid #e0e0e0;
+            padding: 2rem 1rem;
+            text-align: center;
+            color: #888;
+            font-size: 0.85rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div>
+                <div class="logo">⚡ Velocity Sports Labs</div>
+                <div class="tagline">The Forge - Morocco Expansion Brief</div>
+            </div>
+            <div class="update-date" id="updateDate"></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Executive Summary -->
+        <section>
+            <h1>Morocco Expansion: Strategic Context & Key Questions</h1>
+            <p style="font-size: 1.1rem; color: #666; margin-top: 1rem;">Weekly partnership brief for Thomas | George Omosun, VSL</p>
+            
+            <div class="highlight-box">
+                <strong>Opportunity:</strong> Morocco's $47.17M sports market is 4x larger than Ghana's, with football dominance mirroring West African passion. Limited established merchandise infrastructure = first-mover advantage for VSL's Didarra platform.
+            </div>
+        </section>
+
+        <!-- Market Data -->
+        <section>
+            <h2>Market Snapshot</h2>
+            
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-value">$47.17M</div>
+                    <div class="metric-label">Morocco Sports Market (2029)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">2.46%</div>
+                    <div class="metric-label">Market CAGR (2024-2029)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">4x</div>
+                    <div class="metric-label">vs. Ghana Size</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">40.7%</div>
+                    <div class="metric-label">Global Football Merch Share</div>
+                </div>
+            </div>
+
+            <h3>Ghana vs Morocco Comparison</h3>
+            <div class="comparison">
+                <div class="comparison-item">
+                    <h4>🇬🇭 Ghana</h4>
+                    <p><strong>Sports Market:</strong> $11.45M (2029)<br>
+                    <strong>Growth:</strong> 0.28% CAGR<br>
+                    <strong>Status:</strong> Reference point for VSL's first market</p>
+                </div>
+                <div class="comparison-item">
+                    <h4>🇲🇦 Morocco</h4>
+                    <p><strong>Sports Market:</strong> $47.17M (2029)<br>
+                    <strong>Growth:</strong> 2.46% CAGR<br>
+                    <strong>Status:</strong> Target expansion market</p>
+                </div>
+            </div>
+
+            <h3>Global Context</h3>
+            <ul class="market-list">
+                <li><strong>Licensed Sports Merch Global Market:</strong> $35.6B (2024) → $56.4B (2034)</li>
+                <li><strong>Football Merchandise CAGR:</strong> 6.3% globally</li>
+                <li><strong>Basketball Growth:</strong> 6.55% CAGR (fastest-growing segment)</li>
+                <li><strong>Offline Retail:</strong> Still dominates at 60.74%, but online growing 7.38% CAGR</li>
+            </ul>
+        </section>
+
+        <!-- Strategic Questions -->
+        <section>
+            <h2>4 Strategic Questions for Thomas</h2>
+            <p style="color: #666; margin-bottom: 1.5rem;">These questions will shape VSL's Morocco GTM strategy. Your VC experience is critical here.</p>
+
+            <div class="strategic-questions">
+                <div class="question-box">
+                    <div class="question-num">Q1: Licensing & Partnership Strategy</div>
+                    <div class="question-text">How should we structure partnerships with Moroccan teams?</div>
+                    <div class="question-subtext">
+                        Moroccan football clubs likely lack mature merchandise programs (unlike European clubs). Should VSL: (a) pursue formal licensing agreements with individual clubs, (b) build a direct B2C merchandise model (no licensing required), or (c) position ourselves as the infrastructure provider helping teams build merchandise capabilities?
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-num">Q2: Market Development Without Catalysts</div>
+                    <div class="question-text">How do we build sustainable demand in an emerging market?</div>
+                    <div class="question-subtext">
+                        Unlike developed markets, Morocco has no major external catalyst. Should we focus on organic partnership revenue from clubs or invest in B2C fan engagement? What's the typical timeline to profitability? Which seasons/tournaments should we target (African Cup of Nations, local leagues)?
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-num">Q3: Capital & Unit Economics</div>
+                    <div class="question-text">What should our revenue model look like?</div>
+                    <div class="question-subtext">
+                        Given Morocco's $47M market size and lower purchasing power vs. developed markets: What's a realistic TAM we can capture? Should we bootstrap with print-on-demand/digital merch first, or invest in physical inventory? At what revenue threshold do club partnerships become sustainable? What capital runway should VSL plan?
+                    </div>
+                </div>
+
+                <div class="question-box">
+                    <div class="question-num">Q4: Team Partnership Sequencing</div>
+                    <div class="question-text">How should we prioritize partner outreach?</div>
+                    <div class="question-subtext">
+                        We have ~8-10 major football clubs + basketball opportunities. Should we secure one flagship partnership first as proof-of-concept, or pursue multi-team approach from day one? What does your experience show about concentration vs. diversification in emerging markets?
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Morocco Landscape -->
+        <section>
+            <h2>Morocco Sports Landscape</h2>
+            
+            <h3>Professional Football (Botola Pro)</h3>
+            <ul class="market-list">
+                <li>Raja Casablanca (most successful, strongest brand)</li>
+                <li>Wydad Athletic Club (Casablanca, historic rival)</li>
+                <li>FAR Rabat (government-backed)</li>
+                <li>FUS Rabat, ASNL, Hassania Agadir, Kawkab Marrakech, Renaissance Berkane</li>
+            </ul>
+
+            <h3>Basketball (Emerging Opportunity)</h3>
+            <ul class="market-list">
+                <li>Growing sport but secondary to football</li>
+                <li>Limited professional infrastructure</li>
+                <li>Youth participation increasing</li>
+                <li>Market gap for merchandise and engagement</li>
+            </ul>
+        </section>
+
+        <!-- Action Items -->
+        <section>
+            <div class="action-items">
+                <h3>Next Steps (This Week)</h3>
+                <ul>
+                    <li>Finalize Morocco teams list in Google Sheets with contact info</li>
+                    <li>Identify 3-5 anchor teams for prioritized outreach</li>
+                    <li>Research current merch efforts by top Moroccan clubs</li>
+                    <li>Map local payment systems, logistics, e-commerce platforms</li>
+                    <li>Scout existing competitors selling Moroccan sports merchandise</li>
+                    <li>Schedule preliminary conversations with 2-3 club stakeholders</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <h3>Ready to Discuss?</h3>
+            <p>Let's align on strategy with Thomas this week. Use the 4 strategic questions above as our agenda.</p>
+            <button class="cta-button" onclick="alert('Meeting scheduler would integrate here')">Schedule Meeting</button>
+        </section>
+
+        <!-- Competitive Position -->
+        <section>
+            <h2>VSL's Competitive Position</h2>
+            <h3>Why We Win</h3>
+            <ul class="market-list">
+                <li>Deep understanding of African sports culture (vs. European competitors)</li>
+                <li>On-ground local assets (your intern bridge)</li>
+                <li>Not competing with Nike/Adidas for premium space</li>
+                <li>Building authentic, local merchandise for underserved market</li>
+                <li>Didarra platform enables direct B2C + B2B (clubs) flexibility</li>
+            </ul>
+
+            <h3>Transparent Risks</h3>
+            <ul class="market-list">
+                <li>Morocco's infrastructure gaps compress margins vs. developed markets</li>
+                <li>Lower purchasing power = smaller average order values</li>
+                <li>Counterfeit competition (Premier League loses $180M annually)</li>
+                <li>Tournament seasonality creates demand volatility</li>
+            </ul>
+        </section>
+
+        <!-- Footer Section -->
+        <section style="border-left: 4px solid #ccc;">
+            <h3 style="color: #888;">Document Info</h3>
+            <p style="color: #666;">
+                <strong>Purpose:</strong> Weekly partner brief for Thomas (VC partner)<br>
+                <strong>Focus:</strong> Morocco market expansion strategy<br>
+                <strong>Owner:</strong> George Omosun, VSL<br>
+                <strong>Status:</strong> Ready for discussion
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Velocity Sports Labs - The Forge Partnership Brief | Updated <span id="footerDate"></span></p>
+        <p style="margin-top: 0.5rem;">Deployable to Vercel for weekly partner updates</p>
+    </footer>
+
+    <script>
+        const today = new Date();
+        const formatted = today.toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        });
+        
+        document.getElementById('updateDate').textContent = `Updated ${formatted}`;
+        document.getElementById('footerDate').textContent = formatted;
+    </script>
+</body>
+</html>
