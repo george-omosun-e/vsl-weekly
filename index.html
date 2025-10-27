@@ -23,15 +23,16 @@
         header {
             background: #ffffff;
             border-bottom: 3px solid #ff4444;
-            padding: 2rem 1rem;
+            padding: 2rem 2rem;
             z-index: 100;
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
         .header-content {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
+            padding: 0 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -85,16 +86,16 @@
         }
 
         main {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 3rem 1.5rem;
+            padding: 3rem 2rem;
         }
 
         section {
             margin-bottom: 3.5rem;
             background: #ffffff;
             border-left: 4px solid #ff4444;
-            padding: 2.5rem;
+            padding: 3rem;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
         }
@@ -123,15 +124,15 @@
 
         .metric-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0;
         }
 
         .metric-card {
             background: #fff5f5;
             border: 1px solid #ffcccc;
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 8px;
             text-align: center;
         }
@@ -154,8 +155,8 @@
         .comparison {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin: 2rem 0;
+            gap: 2rem;
+            margin: 2.5rem 0;
         }
 
         .comparison-item {
@@ -186,8 +187,8 @@
         .question-box {
             background: #fff5f5;
             border-left: 4px solid #ff4444;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
             border-radius: 4px;
         }
 
@@ -215,8 +216,8 @@
         .action-items {
             background: #fffaf5;
             border-left: 4px solid #ff9600;
-            padding: 1.5rem;
-            margin: 2rem 0;
+            padding: 2rem;
+            margin: 2.5rem 0;
             border-radius: 4px;
         }
 
@@ -252,9 +253,9 @@
         .highlight-box {
             background: linear-gradient(135deg, #fff5f5, #fffaf5);
             border: 1px solid #ffcccc;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 8px;
-            margin: 2rem 0;
+            margin: 2.5rem 0;
             font-size: 1.02rem;
             line-height: 1.8;
         }
@@ -318,16 +319,23 @@
             letter-spacing: 0.5px;
         }
 
-        .cta-button:hover {
-            background: #ff5555;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(255, 68, 68, 0.3);
+        a {
+            color: #ff4444;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid #ff4444;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #ff5555;
+            border-bottom-color: #ff5555;
         }
 
         footer {
             background: #ffffff;
             border-top: 1px solid #e0e0e0;
-            padding: 2rem 1rem;
+            padding: 2rem;
             text-align: center;
             color: #888;
             font-size: 0.85rem;
@@ -350,10 +358,15 @@
             .header-content {
                 flex-direction: column;
                 align-items: flex-start;
+                padding: 0 1rem;
             }
 
             section {
                 padding: 1.5rem;
+            }
+
+            main {
+                padding: 2rem 1rem;
             }
         }
     </style>
@@ -379,7 +392,7 @@
             <p style="font-size: 1.1rem; color: #000000; margin-top: 1rem; line-height: 1.8;">Weekly partnership brief for Thomas | George Omosun, VSL</p>
             
             <div class="highlight-box">
-                <strong>Summary:</strong> Ghana serves as our pilot destination for platform development and product validation. Morocco is our main launch market—its $47.17M sports market is 4x larger than Ghana's, with football dominance mirroring West African passion. Limited established merchandise infrastructure in Morocco = first-mover advantage for VSL's dual platform approach. We're bringing both <strong>Didarra</strong> (merchandise infrastructure: didarra.com) and <strong>Votestash</strong> (e-contest platform: votestash.com) to unlock new revenue streams and fan engagement opportunities.
+                <strong>Summary:</strong> Ghana serves as our pilot destination for platform development and product validation. Morocco is our main launch market—its $47.17M sports market is 4x larger than Ghana's, with football dominance mirroring West African passion. Limited established merchandise infrastructure in Morocco = first-mover advantage for VSL's dual platform approach. We're bringing both <strong><a href="https://didarra.com" target="_blank">Didarra</a></strong> (merchandise infrastructure) and <strong><a href="https://votestash.com" target="_blank">Votestash</a></strong> (e-contest platform) to unlock new revenue streams and fan engagement opportunities.
             </div>
         </section>
 
@@ -452,7 +465,7 @@
             <div class="action-items">
                 <h3>Currently Ongoing Tasks</h3>
                 <ul>
-                    <li>Building Morocco teams database (view live: <a href="https://docs.google.com/spreadsheets/d/1XEcbzNTvhGeAPJYjfoEOZlqfj1J9qFe6aYADnf18q8o/edit?gid=0#gid=0" target="_blank" style="color: #ff4444; text-decoration: none; font-weight: 600;">Google Sheets</a>)</li>
+                    <li>Building Morocco teams database (view live: <a href="https://docs.google.com/spreadsheets/d/1XEcbzNTvhGeAPJYjfoEOZlqfj1J9qFe6aYADnf18q8o/edit?gid=0#gid=0" target="_blank">Google Sheets</a>)</li>
                     <li>Identifying 3-5 anchor teams for prioritized outreach</li>
                     <li>Researching current merch efforts by top Moroccan clubs</li>
                     <li>Mapping local payment systems, logistics, e-commerce platforms</li>
