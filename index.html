@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VSL - The Forge - Morocco Expansion Brief</title>
+    <title>VSL - The Forge - Weekly Brief</title>
     <style>
         * {
             margin: 0;
@@ -14,17 +14,16 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
             background: #f8f9fa;
-            color: #2c3e50;
-            line-height: 1.6;
+            color: #000000;
+            line-height: 1.8;
             min-height: 100vh;
+            font-size: 16px;
         }
 
         header {
             background: #ffffff;
             border-bottom: 3px solid #ff4444;
             padding: 2rem 1rem;
-            position: sticky;
-            top: 0;
             z-index: 100;
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -38,12 +37,38 @@
             align-items: center;
         }
 
-        .logo {
-            font-size: 1.8rem;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+        }
+
+        .logo-text-main {
+            font-size: 1rem;
             font-weight: 700;
             color: #ff4444;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text-sub {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #ff4444;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .tagline {
@@ -60,29 +85,29 @@
         }
 
         main {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 3rem 1.5rem;
         }
 
         section {
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
             background: #ffffff;
             border-left: 4px solid #ff4444;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #1a1a1a;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: #000000;
             line-height: 1.2;
         }
 
         h2 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 1.5rem;
             color: #ff4444;
             text-transform: uppercase;
@@ -90,10 +115,10 @@
         }
 
         h3 {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin-top: 1.5rem;
             margin-bottom: 0.75rem;
-            color: #2c3e50;
+            color: #000000;
         }
 
         .metric-grid {
@@ -112,17 +137,18 @@
         }
 
         .metric-value {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 700;
             color: #ff4444;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .metric-label {
-            font-size: 0.9rem;
-            color: #666;
+            font-size: 0.95rem;
+            color: #000000;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            line-height: 1.4;
         }
 
         .comparison {
@@ -148,8 +174,9 @@
         }
 
         .comparison-item p {
-            color: #2c3e50;
-            font-size: 0.95rem;
+            color: #000000;
+            font-size: 1.02rem;
+            line-height: 1.7;
         }
 
         .strategic-questions {
@@ -173,16 +200,16 @@
         }
 
         .question-text {
-            color: #2c3e50;
+            color: #000000;
             font-weight: 600;
-            margin-bottom: 0.75rem;
-            font-size: 1.05rem;
+            margin-bottom: 1rem;
+            font-size: 1.15rem;
         }
 
         .question-subtext {
-            color: #555;
-            font-size: 0.9rem;
-            line-height: 1.5;
+            color: #000000;
+            font-size: 1rem;
+            line-height: 1.8;
         }
 
         .action-items {
@@ -204,9 +231,11 @@
         }
 
         .action-items li {
-            padding: 0.5rem 0;
-            color: #2c3e50;
+            padding: 0.75rem 0;
+            color: #000000;
             border-bottom: 1px solid rgba(255, 150, 0, 0.2);
+            font-size: 1.02rem;
+            line-height: 1.6;
         }
 
         .action-items li:last-child {
@@ -223,9 +252,11 @@
         .highlight-box {
             background: linear-gradient(135deg, #fff5f5, #fffaf5);
             border: 1px solid #ffcccc;
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 8px;
-            margin: 1.5rem 0;
+            margin: 2rem 0;
+            font-size: 1.02rem;
+            line-height: 1.8;
         }
 
         .highlight-box strong {
@@ -238,10 +269,12 @@
         }
 
         .market-list li {
-            padding: 0.75rem 0;
-            color: #2c3e50;
+            padding: 0.9rem 0;
+            color: #000000;
             padding-left: 1.5rem;
             position: relative;
+            font-size: 1.02rem;
+            line-height: 1.6;
         }
 
         .market-list li:before {
@@ -261,11 +294,11 @@
 
         .cta-section h3 {
             margin-top: 0;
-            color: #2c3e50;
+            color: #000000;
         }
 
         .cta-section p {
-            color: #555;
+            color: #000000;
         }
 
         .cta-button {
@@ -328,9 +361,12 @@
 <body>
     <header>
         <div class="header-content">
-            <div>
-                <div class="logo">⚡ Velocity Sports Labs</div>
-                <div class="tagline">The Forge - Morocco Expansion Brief</div>
+            <div class="logo-container">
+                <img src="https://www.velocitysportslabs.com/icon.svg" alt="Velocity Sports Labs" class="logo-img">
+                <div class="logo-text">
+                    <div class="logo-text-main">Velocity</div>
+                    <div class="logo-text-sub">Sports Labs</div>
+                </div>
             </div>
             <div class="update-date" id="updateDate"></div>
         </div>
@@ -339,11 +375,11 @@
     <main>
         <!-- Executive Summary -->
         <section>
-            <h1>Morocco Expansion: Strategic Context & Key Questions</h1>
-            <p style="font-size: 1.1rem; color: #666; margin-top: 1rem;">Weekly partnership brief for Thomas | George Omosun, VSL</p>
+            <h1>Velocity Sports Labs in Morocco</h1>
+            <p style="font-size: 1.1rem; color: #000000; margin-top: 1rem; line-height: 1.8;">Weekly partnership brief for Thomas | George Omosun, VSL</p>
             
             <div class="highlight-box">
-                <strong>Opportunity:</strong> Morocco's $47.17M sports market is 4x larger than Ghana's, with football dominance mirroring West African passion. Limited established merchandise infrastructure = first-mover advantage for VSL's Didarra platform.
+                <strong>Summary:</strong> Ghana serves as our pilot destination for platform development and product validation. Morocco is our main launch market—its $47.17M sports market is 4x larger than Ghana's, with football dominance mirroring West African passion. Limited established merchandise infrastructure in Morocco = first-mover advantage for VSL's dual platform approach. We're bringing both <strong>Didarra</strong> (merchandise infrastructure: didarra.com) and <strong>Votestash</strong> (e-contest platform: votestash.com) to unlock new revenue streams and fan engagement opportunities.
             </div>
         </section>
 
@@ -397,116 +433,43 @@
 
         <!-- Strategic Questions -->
         <section>
-            <h2>4 Strategic Questions for Thomas</h2>
-            <p style="color: #666; margin-bottom: 1.5rem;">These questions will shape VSL's Morocco GTM strategy. Your VC experience is critical here.</p>
+            <h2>Questions for Thomas</h2>
+            <p style="color: #000000; margin-bottom: 1.5rem; font-size: 1.02rem; line-height: 1.8;">As we move from Ghana (pilot) to Morocco (main launch), we need your strategic input on this critical decision:</p>
 
             <div class="strategic-questions">
                 <div class="question-box">
-                    <div class="question-num">Q1: Licensing & Partnership Strategy</div>
-                    <div class="question-text">How should we structure partnerships with Moroccan teams?</div>
+                    <div class="question-num">Q1: Licensing Model for Morocco</div>
+                    <div class="question-text">How should we approach partnerships with Moroccan clubs?</div>
                     <div class="question-subtext">
-                        Moroccan football clubs likely lack mature merchandise programs (unlike European clubs). Should VSL: (a) pursue formal licensing agreements with individual clubs, (b) build a direct B2C merchandise model (no licensing required), or (c) position ourselves as the infrastructure provider helping teams build merchandise capabilities?
-                    </div>
-                </div>
-
-                <div class="question-box">
-                    <div class="question-num">Q2: Market Development Without Catalysts</div>
-                    <div class="question-text">How do we build sustainable demand in an emerging market?</div>
-                    <div class="question-subtext">
-                        Unlike developed markets, Morocco has no major external catalyst. Should we focus on organic partnership revenue from clubs or invest in B2C fan engagement? What's the typical timeline to profitability? Which seasons/tournaments should we target (African Cup of Nations, local leagues)?
-                    </div>
-                </div>
-
-                <div class="question-box">
-                    <div class="question-num">Q3: Capital & Unit Economics</div>
-                    <div class="question-text">What should our revenue model look like?</div>
-                    <div class="question-subtext">
-                        Given Morocco's $47M market size and lower purchasing power vs. developed markets: What's a realistic TAM we can capture? Should we bootstrap with print-on-demand/digital merch first, or invest in physical inventory? At what revenue threshold do club partnerships become sustainable? What capital runway should VSL plan?
-                    </div>
-                </div>
-
-                <div class="question-box">
-                    <div class="question-num">Q4: Team Partnership Sequencing</div>
-                    <div class="question-text">How should we prioritize partner outreach?</div>
-                    <div class="question-subtext">
-                        We have ~8-10 major football clubs + basketball opportunities. Should we secure one flagship partnership first as proof-of-concept, or pursue multi-team approach from day one? What does your experience show about concentration vs. diversification in emerging markets?
+                        In Ghana, we've been testing different partnership models. For Morocco, we're considering whether to pursue formal licensing agreements with individual clubs or take a direct B2C approach where we own the merchandise relationship with fans. Moroccan teams don't have the mature merchandise infrastructure of European clubs. Which approach makes more sense given Morocco's market maturity and our stage?
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Morocco Landscape -->
-        <section>
-            <h2>Morocco Sports Landscape</h2>
-            
-            <h3>Professional Football (Botola Pro)</h3>
-            <ul class="market-list">
-                <li>Raja Casablanca (most successful, strongest brand)</li>
-                <li>Wydad Athletic Club (Casablanca, historic rival)</li>
-                <li>FAR Rabat (government-backed)</li>
-                <li>FUS Rabat, ASNL, Hassania Agadir, Kawkab Marrakech, Renaissance Berkane</li>
-            </ul>
-
-            <h3>Basketball (Emerging Opportunity)</h3>
-            <ul class="market-list">
-                <li>Growing sport but secondary to football</li>
-                <li>Limited professional infrastructure</li>
-                <li>Youth participation increasing</li>
-                <li>Market gap for merchandise and engagement</li>
-            </ul>
         </section>
 
         <!-- Action Items -->
         <section>
             <div class="action-items">
-                <h3>Next Steps (This Week)</h3>
+                <h3>Currently Ongoing Tasks</h3>
                 <ul>
-                    <li>Finalize Morocco teams list in Google Sheets with contact info</li>
-                    <li>Identify 3-5 anchor teams for prioritized outreach</li>
-                    <li>Research current merch efforts by top Moroccan clubs</li>
-                    <li>Map local payment systems, logistics, e-commerce platforms</li>
-                    <li>Scout existing competitors selling Moroccan sports merchandise</li>
-                    <li>Schedule preliminary conversations with 2-3 club stakeholders</li>
+                    <li>Building Morocco teams database (view live: <a href="https://docs.google.com/spreadsheets/d/1XEcbzNTvhGeAPJYjfoEOZlqfj1J9qFe6aYADnf18q8o/edit?gid=0#gid=0" target="_blank" style="color: #ff4444; text-decoration: none; font-weight: 600;">Google Sheets</a>)</li>
+                    <li>Identifying 3-5 anchor teams for prioritized outreach</li>
+                    <li>Researching current merch efforts by top Moroccan clubs</li>
+                    <li>Mapping local payment systems, logistics, e-commerce platforms</li>
+                    <li>Scouting existing competitors selling Moroccan sports merchandise</li>
+                    <li>Preliminary conversations with 2-3 club stakeholders scheduled</li>
                 </ul>
             </div>
         </section>
 
-        <!-- CTA -->
-        <section class="cta-section">
-            <h3>Ready to Discuss?</h3>
-            <p>Let's align on strategy with Thomas this week. Use the 4 strategic questions above as our agenda.</p>
-            <button class="cta-button" onclick="alert('Meeting scheduler would integrate here')">Schedule Meeting</button>
-        </section>
-
-        <!-- Competitive Position -->
-        <section>
-            <h2>VSL's Competitive Position</h2>
-            <h3>Why We Win</h3>
-            <ul class="market-list">
-                <li>Deep understanding of African sports culture (vs. European competitors)</li>
-                <li>On-ground local assets (your intern bridge)</li>
-                <li>Not competing with Nike/Adidas for premium space</li>
-                <li>Building authentic, local merchandise for underserved market</li>
-                <li>Didarra platform enables direct B2C + B2B (clubs) flexibility</li>
-            </ul>
-
-            <h3>Transparent Risks</h3>
-            <ul class="market-list">
-                <li>Morocco's infrastructure gaps compress margins vs. developed markets</li>
-                <li>Lower purchasing power = smaller average order values</li>
-                <li>Counterfeit competition (Premier League loses $180M annually)</li>
-                <li>Tournament seasonality creates demand volatility</li>
-            </ul>
-        </section>
-
         <!-- Footer Section -->
         <section style="border-left: 4px solid #ccc;">
-            <h3 style="color: #888;">Document Info</h3>
-            <p style="color: #666;">
+            <h3 style="color: #000000;">Document Info</h3>
+            <p style="color: #000000; font-size: 1.02rem; line-height: 1.8;">
                 <strong>Purpose:</strong> Weekly partner brief for Thomas (VC partner)<br>
                 <strong>Focus:</strong> Morocco market expansion strategy<br>
                 <strong>Owner:</strong> George Omosun, VSL<br>
-                <strong>Status:</strong> Ready for discussion
+                <strong>Date:</strong> <span id="docDate"></span>
             </p>
         </section>
     </main>
@@ -526,6 +489,7 @@
         
         document.getElementById('updateDate').textContent = `Updated ${formatted}`;
         document.getElementById('footerDate').textContent = formatted;
+        document.getElementById('docDate').textContent = formatted;
     </script>
 </body>
 </html>
