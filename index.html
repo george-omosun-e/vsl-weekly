@@ -406,6 +406,84 @@
             text-align: right;
         }
 
+        .timeline-nav {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .week-btn {
+            padding: 0.5rem 1.25rem;
+            border: 2px solid #ff4444;
+            background: #ffffff;
+            color: #ff4444;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .week-btn:hover {
+            background: #fff5f5;
+        }
+
+        .week-btn.active {
+            background: #ff4444;
+            color: #ffffff;
+        }
+
+        .timeline-content {
+            display: none;
+        }
+
+        .timeline-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .progress-item {
+            background: #f8f9fa;
+            border-left: 4px solid #ff4444;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+            border-radius: 4px;
+        }
+
+        .progress-item h4 {
+            color: #ff4444;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .progress-item p {
+            color: #000000;
+            margin: 0.5rem 0;
+            line-height: 1.7;
+        }
+
+        .progress-item ul {
+            color: #000000;
+            margin: 0.75rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .progress-item li {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+
         @media (max-width: 768px) {
             .task-item {
                 flex-direction: column;
@@ -474,10 +552,10 @@
         <!-- Executive Summary -->
         <section>
             <h1>Velocity Sports Labs in Morocco</h1>
-            <p style="font-size: 1.1rem; color: #000000; margin-top: 1rem; line-height: 1.8;">Weekly brief for Thomas Poitrineau | George Omosun, VSL</p>
+            <p style="font-size: 1.1rem; color: #000000; margin-top: 1rem; line-height: 1.8;">Weekly partnership brief for Thomas | George Omosun, VSL</p>
             
             <div class="highlight-box">
-                <strong>Summary:</strong> Ghana serves as our pilot destination for platform development and product validation. Morocco is our main launch market—its $47.17M sports market is 4x larger than Ghana's, with football dominance mirroring West African passion. Limited established merchandise infrastructure in Morocco = first-mover advantage for VSL's dual platform approach. We're bringing both <strong><a href="https://didarra.com" target="_blank">Didarra</a></strong> (merchandise infrastructure) and <strong><a href="https://votestash.com" target="_blank">Votestash</a></strong> (e-contest platform) to unlock new revenue streams and fan engagement opportunities.
+                <strong>Strategic Pivot:</strong> Ghana is our validation ground for Votestash innovation and Morocco is our first commercial expansion market. We're pivoting to a subscription model: voting is free for teams and fans within team ecosystems, but we charge fans for league-wide contests (Player of Season, Coach of Season, etc.). This unlocks league-level monetization while maintaining mass fan participation. <strong><a href="https://votestash.com" target="_blank">Votestash</a></strong> is our immediate priority; <strong><a href="https://didarra.com" target="_blank">Didarra</a></strong> (merchandise) is maintained in Ghana but paused for Morocco to focus resources. Goal: Capture untapped fan attention across Africa and emerging markets before Western players scale in the region.
             </div>
         </section>
 
@@ -529,24 +607,147 @@
             </ul>
         </section>
 
-        <!-- Strategic Questions -->
+        <!-- Defensibility & Strategic Position -->
         <section>
-            <h2>Questions for Thomas</h2>
-            <p style="color: #000000; margin-bottom: 1.5rem; font-size: 1.02rem; line-height: 1.8;">As we move from Ghana (pilot) to Morocco (main launch), we need your strategic input on this critical decision:</p>
+            <h2>Defensibility & Market Opportunity</h2>
+            
+            <div class="highlight-box">
+                <strong>Votestash Defensibility:</strong> We're building a subscription-based fan engagement infrastructure for sports leagues in emerging markets—a category that doesn't exist at scale. Unlike the saturated Western market dominated by established players like Fanatics, we're capturing the blue ocean of untapped fan attention in Africa, North Africa, and the Middle East.
+            </div>
 
-            <div class="strategic-questions">
-                <div class="question-box">
-                    <div class="question-num">Q1: Licensing Model for Morocco</div>
-                    <div class="question-text">How should we approach partnerships with Moroccan clubs?</div>
-                    <div class="question-subtext">
-                        In Ghana, we've been testing different partnership models. For Morocco, we're considering whether to pursue formal licensing agreements with individual clubs or take a direct B2C approach where we own the merchandise relationship with fans. Moroccan teams don't have the mature merchandise infrastructure of European clubs. Which approach makes more sense given Morocco's market maturity and our stage?
-                    </div>
+            <h3>Why This Works Now</h3>
+            <p>
+                <strong>Market Timing:</strong> Emerging sports markets (Morocco, North Africa, Middle East) are desperately seeking digital fan engagement solutions but lack the infrastructure. Middle Eastern leagues are making massive investments in sports relevance (e.g., EA Sports acquisition) and need fan-facing technology to activate their spending. These markets have growing mobile penetration but limited sophisticated engagement tools.
+            </p>
+            <p>
+                <strong>Direct B2B Model:</strong> We're selling directly to teams and leagues—not competing for consumer attention in a fragmented marketplace. This is a high-margin subscription business with predictable recurring revenue. Teams pay for Votestash to own their fan micro-decisions, and we scale across the region with minimal customer acquisition friction.
+            </p>
+            <p>
+                <strong>Fan Attention as Currency:</strong> In developed markets, fan attention is commoditized. In emerging markets, it's undermonetized. We're the first to systematically capture fan micro-interactions (voting, predictions, engagement) and convert them into data and revenue for both teams and ourselves.
+            </p>
+
+            <h3>Why Competitors Can't Easily Replicate</h3>
+            <ul class="market-list">
+                <li><strong>Local Expertise:</strong> We understand African sports culture and emerging market dynamics in ways Western tech companies don't. We've already tested models in Ghana and have local teams executing.</li>
+                <li><strong>Network Effects:</strong> Once we establish Votestash as the fan engagement standard in Morocco, expanding to North Africa, Middle East, and beyond becomes a replication play. Teams want the platform their competitors use.</li>
+                <li><strong>Data Moat:</strong> Every fan micro-decision creates data we can use to build AI-generated interactive game modes. This becomes a product moat—the more fans use Votestash, the better our games get, making the platform more valuable.</li>
+                <li><strong>Multi-Revenue Streams:</strong> Subscription (teams), premium contests (League Player of Season voting), ads, and games create defensibility through diversified monetization that single-revenue competitors can't match.</li>
+            </ul>
+
+            <h3>Market Size & Growth Path</h3>
+            <ul class="market-list">
+                <li><strong>Morocco Entry:</strong> $47.17M sports market with 16+ professional football clubs + basketball teams. Subscription model targets 5-10 clubs initially at $10-50K/year = $50-500K ARR Year 1.</li>
+                <li><strong>North Africa Expansion:</strong> Algeria, Tunisia, Egypt = 3x Morocco's market. If we capture 15% of professional clubs across the region = $500K-$2M ARR.</li>
+                <li><strong>Middle East Opportunity:</strong> Saudi Arabia, UAE, Qatar investing $100B+ in sports. One Saudi club spending on Votestash could be $500K-$1M+ annually given their budget scales.</li>
+                <li><strong>E-Sports Adjacent:</strong> E-sports adoption in Africa growing 40%+ YoY. Votestash can expand into esports betting/fan voting, a category with even higher monetization potential than traditional sports.</li>
+            </ul>
+
+            <h3>Why Investors Should Be Excited</h3>
+            <ul class="market-list">
+                <li>Entering a category that doesn't exist at scale in high-growth emerging markets</li>
+                <li>B2B subscription model = predictable, high-margin revenue with low churn</li>
+                <li>First-mover advantage in a region where Western competitors haven't established dominance</li>
+                <li>Clear expansion path: Morocco → North Africa → Middle East → Pan-Africa</li>
+                <li>Multiple revenue levers: subscriptions, premium contests, advertising, games, e-sports</li>
+                <li>Defensible through data, local expertise, and network effects</li>
+            </ul>
+        </section>
+
+        <!-- Progress Timeline -->
+        <section>
+            <h2>Progress Timeline</h2>
+            <p style="color: #666; font-size: 0.95rem; margin-bottom: 2rem;">Week-by-week progression of Morocco expansion and Votestash development. Select a week to view detailed updates.</p>
+
+            <div class="timeline-nav">
+                <button class="week-btn active" onclick="showWeek('week1')">Week 1 (Oct 27 - Nov 2)</button>
+                <button class="week-btn" onclick="showWeek('week2')">Week 2 (Nov 3 - Nov 6)</button>
+            </div>
+
+            <!-- Week 1 -->
+            <div id="week1" class="timeline-content active">
+                <div class="progress-item">
+                    <h4>🚀 Initial Kickoff & Partnership Structure</h4>
+                    <ul>
+                        <li>First weekly check-in with Thomas - established cadence and expectations</li>
+                        <li>Built preliminary Morocco teams database (16 football clubs + basketball teams)</li>
+                        <li>Created online tracking brief for real-time updates to Thomas</li>
+                    </ul>
+                </div>
+
+                <div class="progress-item">
+                    <h4>📊 Market Research Initiated</h4>
+                    <ul>
+                        <li>Analyzed Morocco sports market ($47.17M, 2.46% CAGR) vs. Ghana ($11.45M, 0.28% CAGR)</li>
+                        <li>Identified global licensed sports merchandise market opportunity ($35.6B → $56.4B by 2034)</li>
+                    </ul>
+                </div>
+
+                <div class="progress-item">
+                    <h4>🎯 Initial Strategy: Didarra + Votestash</h4>
+                    <ul>
+                        <li>Planned dual-platform approach (Didarra for merchandise, Votestash for fan contests)</li>
+                        <li>Identified licensing as key strategic question for Morocco partnerships</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Week 2 -->
+            <div id="week2" class="timeline-content">
+                <div class="progress-item">
+                    <h4>🔄 Strategic Pivot to Votestash Focus</h4>
+                    <ul>
+                        <li>Identified merchandise infrastructure (Didarra) as non-priority for Morocco immediate launch</li>
+                        <li>Pivoted to Votestash as primary growth engine for emerging markets</li>
+                        <li>Ditarra maintained in Ghana (pilot) but deprioritized for North Africa expansion</li>
+                    </ul>
+                </div>
+
+                <div class="progress-item">
+                    <h4>💼 Business Model Evolution</h4>
+                    <ul>
+                        <li>Implemented subscription model: Free for teams ↔ fans, Paid for league contests (Player of Season, Coach of Season, etc.)</li>
+                        <li>New revenue thesis: Recurring subscriptions + high-margin league contests</li>
+                        <li>Goal shifted from merchandise focus to capturing untapped fan attention in emerging markets</li>
+                    </ul>
+                </div>
+
+                <div class="progress-item">
+                    <h4>👥 Team & Execution</h4>
+                    <ul>
+                        <li>Hired dedicated cold-caller to manage Morocco club outreach</li>
+                        <li>Completed anchor team identification (3-5 priority clubs selected)</li>
+                        <li>Restructured Ghana team for Votestash focus across Morocco, North Africa, Middle East expansion</li>
+                    </ul>
+                </div>
+
+                <div class="progress-item">
+                    <h4>🎮 Product & Innovation</h4>
+                    <ul>
+                        <li>Initiated research on additional game modes for Votestash (side attractions to increase engagement)</li>
+                        <li>Scoped AI-generated interactive games based on fan trends and micro-decisions</li>
+                    </ul>
+                </div>
+
+                <div class="progress-item">
+                    <h4>🗺️ Market Positioning</h4>
+                    <ul>
+                        <li>Recognized Europe as saturated (Fanatics dominance)</li>
+                        <li>Identified e-sports as adjacent growth opportunity (40%+ YoY adoption in Africa)</li>
+                        <li>Set strategic expansion path: Morocco → North Africa → Middle East → Pan-Africa</li>
+                    </ul>
+                </div>
+
+                <div class="progress-item">
+                    <h4>✅ Completed Tasks</h4>
+                    <ul>
+                        <li>✓ Building preliminary Morocco teams database</li>
+                        <li>✓ Identifying 3-5 anchor teams for prioritized outreach</li>
+                        <li>✓ Hired cold-caller for team outreach</li>
+                        <li>✓ Restructured Ghana team for Votestash focus</li>
+                    </ul>
                 </div>
             </div>
         </section>
-
-        <!-- Action Items -->
-        <section>
             <div class="action-items">
                 <h3>Task Tracker</h3>
                 <p style="color: #666; font-size: 0.95rem; margin-bottom: 1.5rem;">All tasks and milestones for Morocco expansion. Status updated weekly.</p>
@@ -573,53 +774,56 @@
                     <div class="task-content">
                         <div class="task-header">
                             <p class="task-name">Identifying 3-5 anchor teams for prioritized outreach</p>
-                            <span class="task-status status-ongoing">◐ Ongoing</span>
+                            <span class="task-status status-done">✓ Done</span>
                         </div>
                         <div class="task-metadata">
                             <span class="task-metadata-label">Created:</span> Oct 27, 2025 | 
-                            <span class="task-metadata-label">Updated:</span> Oct 27, 2025
+                            <span class="task-metadata-label">Updated:</span> Nov 6, 2025
                         </div>
                     </div>
                 </div>
 
-                <!-- Task 3 -->
-                <div class="task-item">
+                <!-- Task 3 - Archived -->
+                <div class="task-item" style="opacity: 0.6;">
                     <div class="task-content">
                         <div class="task-header">
                             <p class="task-name">Researching current merch efforts by top Moroccan clubs</p>
-                            <span class="task-status status-ongoing">◐ Ongoing</span>
+                            <span class="task-status" style="background: #e8e8e8; color: #555; border: 1px solid #ccc;">◻ Archived</span>
                         </div>
                         <div class="task-metadata">
                             <span class="task-metadata-label">Created:</span> Oct 27, 2025 | 
-                            <span class="task-metadata-label">Updated:</span> Oct 27, 2025
+                            <span class="task-metadata-label">Updated:</span> Nov 6, 2025 | 
+                            <span class="task-metadata-label">Reason:</span> Non-priority due to Votestash prioritization
                         </div>
                     </div>
                 </div>
 
-                <!-- Task 4 -->
-                <div class="task-item">
+                <!-- Task 4 - Archived -->
+                <div class="task-item" style="opacity: 0.6;">
                     <div class="task-content">
                         <div class="task-header">
                             <p class="task-name">Mapping local payment systems, logistics, e-commerce platforms</p>
-                            <span class="task-status status-ongoing">◐ Ongoing</span>
+                            <span class="task-status" style="background: #e8e8e8; color: #555; border: 1px solid #ccc;">◻ Archived</span>
                         </div>
                         <div class="task-metadata">
                             <span class="task-metadata-label">Created:</span> Oct 27, 2025 | 
-                            <span class="task-metadata-label">Updated:</span> Oct 27, 2025
+                            <span class="task-metadata-label">Updated:</span> Nov 6, 2025 | 
+                            <span class="task-metadata-label">Reason:</span> Non-priority due to Votestash prioritization
                         </div>
                     </div>
                 </div>
 
-                <!-- Task 5 -->
-                <div class="task-item">
+                <!-- Task 5 - Archived -->
+                <div class="task-item" style="opacity: 0.6;">
                     <div class="task-content">
                         <div class="task-header">
                             <p class="task-name">Scouting existing competitors selling Moroccan sports merchandise</p>
-                            <span class="task-status status-ongoing">◐ Ongoing</span>
+                            <span class="task-status" style="background: #e8e8e8; color: #555; border: 1px solid #ccc;">◻ Archived</span>
                         </div>
                         <div class="task-metadata">
                             <span class="task-metadata-label">Created:</span> Oct 27, 2025 | 
-                            <span class="task-metadata-label">Updated:</span> Oct 27, 2025
+                            <span class="task-metadata-label">Updated:</span> Nov 6, 2025 | 
+                            <span class="task-metadata-label">Reason:</span> Non-priority due to Votestash prioritization
                         </div>
                     </div>
                 </div>
@@ -633,7 +837,63 @@
                         </div>
                         <div class="task-metadata">
                             <span class="task-metadata-label">Created:</span> Oct 27, 2025 | 
-                            <span class="task-metadata-label">Updated:</span> Oct 27, 2025
+                            <span class="task-metadata-label">Updated:</span> Nov 6, 2025
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task 7 -->
+                <div class="task-item">
+                    <div class="task-content">
+                        <div class="task-header">
+                            <p class="task-name">Hired cold-caller for team outreach</p>
+                            <span class="task-status status-done">✓ Done</span>
+                        </div>
+                        <div class="task-metadata">
+                            <span class="task-metadata-label">Created:</span> Nov 6, 2025 | 
+                            <span class="task-metadata-label">Updated:</span> Nov 6, 2025
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task 8 -->
+                <div class="task-item">
+                    <div class="task-content">
+                        <div class="task-header">
+                            <p class="task-name">Implement Votestash subscription model (free for teams/fans, paid for league contests)</p>
+                            <span class="task-status status-ongoing">◐ Ongoing</span>
+                        </div>
+                        <div class="task-metadata">
+                            <span class="task-metadata-label">Created:</span> Nov 6, 2025 | 
+                            <span class="task-metadata-label">Updated:</span> Nov 6, 2025
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task 9 -->
+                <div class="task-item">
+                    <div class="task-content">
+                        <div class="task-header">
+                            <p class="task-name">Research additional game modes for Votestash (side attractions)</p>
+                            <span class="task-status status-ongoing">◐ Ongoing</span>
+                        </div>
+                        <div class="task-metadata">
+                            <span class="task-metadata-label">Created:</span> Nov 6, 2025 | 
+                            <span class="task-metadata-label">Updated:</span> Nov 6, 2025
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task 10 -->
+                <div class="task-item">
+                    <div class="task-content">
+                        <div class="task-header">
+                            <p class="task-name">Restructure Ghana team for Votestash focus</p>
+                            <span class="task-status status-done">✓ Done</span>
+                        </div>
+                        <div class="task-metadata">
+                            <span class="task-metadata-label">Created:</span> Nov 6, 2025 | 
+                            <span class="task-metadata-label">Updated:</span> Nov 6, 2025
                         </div>
                     </div>
                 </div>
@@ -645,7 +905,7 @@
         <section style="border-left: 4px solid #ccc;">
             <h3 style="color: #000000;">Document Info</h3>
             <p style="color: #000000; font-size: 1.02rem; line-height: 1.8;">
-                <strong>Purpose:</strong> Weekly partner brief for Thomas Poitrineau (VC partner)<br>
+                <strong>Purpose:</strong> Weekly partner brief for Thomas (VC partner)<br>
                 <strong>Focus:</strong> Morocco market expansion strategy<br>
                 <strong>Owner:</strong> George Omosun, VSL<br>
                 <strong>Date:</strong> <span id="docDate"></span>
@@ -669,6 +929,27 @@
         document.getElementById('updateDate').textContent = `Updated ${formatted}`;
         document.getElementById('footerDate').textContent = formatted;
         document.getElementById('docDate').textContent = formatted;
+
+        // Timeline navigation
+        function showWeek(weekId) {
+            // Hide all timeline contents
+            const contents = document.querySelectorAll('.timeline-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active from all buttons
+            const buttons = document.querySelectorAll('.week-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected week
+            document.getElementById(weekId).classList.add('active');
+
+            // Activate corresponding button
+            event.target.classList.add('active');
+        }
     </script>
 </body>
 </html>
